@@ -1,12 +1,15 @@
-import { View, Text } from 'react-native'
-import React from 'react'
+import React from "react";
+import { Text, View } from "react-native";
+import { Keyboard, TouchableWithoutFeedback } from "react-native";
 
 const Page = () => {
   return (
-    <View>
-      <Text>Page</Text>
-    </View>
-  )
-}
+    <TouchableWithoutFeedback onPress={Keyboard.dismiss} accessible={false}>
+      <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
+        <Text>Page</Text>
+      </View>
+    </TouchableWithoutFeedback>
+  );
+};
 
-export default Page
+export default Page;
